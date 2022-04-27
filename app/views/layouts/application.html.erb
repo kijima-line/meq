@@ -11,7 +11,13 @@
 
   <body>
       <div class="flexbox">
-        <div class="list"></div></div>
-    <%= yield %>
+        <div class="list">
+        <%= link_to "作成する",new_mee_path %></div>
+        <article class="main">
+            <!-- カラム 2 ここから -->
+            <%= yield %>
+                <!-- カラム 2 ここまで -->
+        </article>
+        </div>
   </body>
 </html>
