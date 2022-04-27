@@ -42,8 +42,8 @@
   
   }
 .list {
-    background: linear-gradient(#05FBFF, #1E00FF);
-    width: 45vh;
+    background: linear-gradient(#05FBFF, #ffffff);
+    width: 25vh;
  
     box-sizing: border-box;
     top: 0px;
@@ -60,3 +60,21 @@
     padding: 2%;
     border-radius: 10px
 }
+.point-box {
+    position: relative;
+    border: 2px solid #8BC34A; /* 枠の太さ・種類・色 */
+    border-radius: 4px; /* 枠の丸み */
+    margin: 1.8em 1em; /* 枠外の余白 */
+    padding: 5px 15px;
+  }
+  
+  .point-title {
+    position: absolute;
+    padding: 0 0.5em;
+    left: 20px;
+    top: -13px; /* タイトルの位置を調整 */
+    color: #555555; /* タイトルの文字色 */
+    font-weight: bold;
+    font-size:0.9em; /* タイトルの文字サイズ */
+    background-color: #ffffff;
+  }
