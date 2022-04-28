@@ -1,5 +1,5 @@
 <div style="background:skyblue;">
- <%= form_with(model: mee, local: true) do |f| %>
+ <%= form_with(model: @mee, local: true) do |f| %>
   <h2>問題解決フォーマット（精度アップ）</h2>
   
 <%= f.date_field :created_at%><%= f.time_field :created_at%>
@@ -8,6 +8,7 @@
 
 <h2>【問題の箇所】</h2>
 <div class="box1"> 
+<p></p>
 <%= f.text_area :q_1, placeholder: "（例）最終課題サーバーサイド",class:"q_a" %></div>
 
 <h2>【問題の内容】</h2>

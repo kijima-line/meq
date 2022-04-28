@@ -5,7 +5,6 @@ class MeesController < ApplicationController
 
   def new
     @mee = Mee.new
-    
   end
 
 
@@ -14,17 +13,28 @@ class MeesController < ApplicationController
     if mee.save
       redirect_to root_path
     else
-      render :new
+      render :index
     end
   end
 
   def destroy
     mee = Mee.find(params[:id])
     if mee.destroy
-      redirect_to root_path, notice: '削除しました。'
+      redirect_to root_path
     else
       render :index
     end
+  end
+  def edit
+    @mee = Mee.find(params[:id])
+    
+  end
+  def update
+    mee = Mee.find(params[:id])
+    mee.update(mee_params)
+  end
+  def show
+    @mee = Mee.find(params[:id])
   end
 
   private

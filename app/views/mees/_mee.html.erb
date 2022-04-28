@@ -1,12 +1,13 @@
 
 <div class="point-box">
+<%#=ログイン情報%><%=link_to "詳しく見る" ,mee_path(mee.id),method: :get %><br><%=link_to '編集する', edit_mee_path(mee.id) ,method: :get%>
 <div class="point-title"><%= l mee.created_at%></div>
 <h2>【問題の箇所】</h2>
 <%= mee.q_1 %><%#=タイトルのみ必須%><br>
 <h2>【問題の内容】</h2>
 ---------実装予定--------
 
-<%=button_to "詳しく見る"%><br>
+
 #タグ（多対多）<br>
 #カテゴリー（activehash）<br>
 #解決済み(いいね機能かチェックボックス)<br>
