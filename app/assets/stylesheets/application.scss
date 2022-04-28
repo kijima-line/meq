@@ -31,7 +31,7 @@
 }
 
 .main {
-    left: 45vh;
+
     display: inline-block; 
     font-size:14px;
     width: 70%;
@@ -62,10 +62,11 @@
 }
 .point-box {
     position: relative;
-    border: 2px solid #8BC34A; /* 枠の太さ・種類・色 */
+    border: 2px solid #0091EA; /* 枠の太さ・種類・色 */
     border-radius: 4px; /* 枠の丸み */
     margin: 1.8em 1em; /* 枠外の余白 */
     padding: 5px 15px;
+    background-color: aquamarine;
   }
   
   .point-title {
@@ -73,8 +74,21 @@
     padding: 0 0.5em;
     left: 20px;
     top: -13px; /* タイトルの位置を調整 */
-    color: #555555; /* タイトルの文字色 */
+    color: #ffffff; /* タイトルの文字色 */
     font-weight: bold;
     font-size:0.9em; /* タイトルの文字サイズ */
-    background-color: #ffffff;
+    background-color: #053bfc;
   }
+  //ここからスマホ表示
+@media ( max-width: 1280px) {
+
+  .main {
+      text-align: left;
+  }
+  .side {
+      display: none;
+  }
+  .list {
+      display: none;
+  }
+}

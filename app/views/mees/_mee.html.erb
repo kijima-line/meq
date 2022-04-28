@@ -1,9 +1,14 @@
 
 <div class="point-box">
-<%#=ログイン情報%><%=link_to "詳しく見る" ,mee_path(mee.id),method: :get %><br><%=link_to '編集する', edit_mee_path(mee.id) ,method: :get%>
+<div class="item-list">
+<%=link_to "詳しく見る" ,mee_path(mee.id),method: :get ,class:"item"%>
+<%=link_to '編集する', edit_mee_path(mee.id) ,method: :get,class:"item1"%>
+</div>
+<%#=ログイン情報%>
 <div class="point-title"><%= l mee.created_at%></div>
 <h2>【問題の箇所】</h2>
-<%= mee.q_1 %><%#=タイトルのみ必須%><br>
+<div class="box1"> 
+<%= mee.q_1 %><%#=タイトルのみ必須%><br></div>
 <h2>【問題の内容】</h2>
 ---------実装予定--------
 
