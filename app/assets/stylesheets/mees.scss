@@ -2,12 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .box1 {
+  background-color: #fff;
   margin: 0.4em auto;
   padding: 0.7em;
   width: 70%;
-  background-color: #fff; /* 背景色 */
-  border: 1px solid #ccc; /* 枠線 */
  }
+ .acd-check{
+  display: none;
+}
+.acd-label{
+  background: #0091EA;
+  color: #fff;
+  display: block;
+  margin-bottom: 1px;
+  padding: 10px;
+}
+.acd-content{
+
+  height: 0;
+  opacity: 0;
+  padding: 0 80px;
+  transition: .5s;
+  visibility: hidden;
+}
+.acd-check:checked + .acd-label + .acd-content{
+  height: auto;
+  opacity: 1;
+  padding: 10px;
+  visibility: visible;
+}
 
  
  p{
@@ -16,6 +39,7 @@
  h2{
   padding: 10px; 
 font-size: medium;
+text-align: center;
  }
  .box{
   background:lavender;  
@@ -27,3 +51,60 @@ font-size: medium;
    height:100px;
    width: 100%;
  }
+
+ .item-list{
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  padding: 10px;
+}
+
+
+/* 装飾用 */
+a {
+  text-decoration:none;
+}
+.item ,.item1{
+  display: inline-block;
+  padding: 0.8em 3em;
+  background-color: #e3364a;
+  box-shadow: 0 5px 0 #ca1c30;
+  border-radius: 60px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  width:100% ;
+  padding:10px ;
+  text-align: center;
+  margin: 10px;
+}
+
+/* ホバー時 */
+.item:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+/* クリック時 */
+.item:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+/* ホバー時 */
+.item1:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+/* クリック時 */
+.item1:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+@media ( max-width: 1280px) {
+  .item ,.item1{
+font-size: 70%;
+  }
+
+
+}
