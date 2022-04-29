@@ -1,10 +1,10 @@
 class MeesController < ApplicationController
   def index
-    @mees = Mee.all
+    @mees = Mee.order("created_at DESC")
   end
 
   def new
-    @mee = Mee.new
+    @mee = Mee.new 
   end
 
 
