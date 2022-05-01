@@ -1,0 +1,13 @@
+current directory: /Users/kijima/project/meq/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/kijima/.rbenv/versions/2.6.5/bin/ruby -I /Users/kijima/.rbenv/versions/2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20220501-11574-rzfd9f.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kijima/project/meq/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= clean
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+current directory: /Users/kijima/project/meq/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\=
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+make failed, exit code 1
