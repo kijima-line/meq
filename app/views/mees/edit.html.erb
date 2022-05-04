@@ -2,7 +2,7 @@
  <%= form_with(model: @mee, local: true) do |f| %>
   <h2>問題解決フォーマット（精度アップ）</h2>
   
-<%= f.date_field :created_at%><%= f.time_field :created_at%>
+<%= f.text_field :q_a%>月<%= f.text_field :q_b%>日<%#= f.time_field :created_at %>
 
 
 

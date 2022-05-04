@@ -5,7 +5,7 @@
 <%=link_to '編集する', edit_mee_path(mee.id) ,method: :get,class:"item1"%>
 </div>
 <%#=ログイン情報%>
-<div class="point-title"><%= l mee.created_at%></div>
+<div class="point-title"><%= mee.q_a%>月<%= mee.q_b%>日</div>
 <h2>【問題の箇所】</h2>
 <div class="box1"> 
 <%= mee.q_1 %><%#=タイトルのみ必須%><br></div>
