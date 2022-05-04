@@ -13,7 +13,8 @@ class MeesController < ApplicationController
     if mee.save
       redirect_to root_path
     else
-      render :index
+      @mees = Mee.all
+      render :new
     end
   end
 
@@ -29,8 +30,8 @@ class MeesController < ApplicationController
     @mee = Mee.find(params[:id])
   end
   def update
-    mee = Mee.find(params[:id])
-    mee.update(mee_params)
+    @mee = Mee.find(params[:id])
+    @mee.update(mee_params)
     redirect_to root_path
   end
   def show
@@ -39,6 +40,6 @@ class MeesController < ApplicationController
 
   private
   def mee_params
-    params.require(:mee).permit(:q_a, :q_b, :q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7).merge(user_id: current_user.id)
+    params.require(:mee,).permit(:q_a, :q_b, :q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7).merge(user_id: current_user.id)
   end
 end

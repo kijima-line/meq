@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_05_03_160217) do
     t.string "q_7"
     t.string "q_a"
     t.string "q_b"
-    t.string "user_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
