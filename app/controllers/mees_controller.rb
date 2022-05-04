@@ -18,20 +18,20 @@ class MeesController < ApplicationController
   end
 
   def destroy
-    mee = Mee.find(params[:id])
-    if mee.destroy
-      redirect_to root_path
-    else
-      render :index
-    end
+    # mee = Mee.find(params[:id])
+    # if mee.destroy
+    #   redirect_to root_path
+    # else
+    #   render :index
+    # end
   end
   def edit
     @mee = Mee.find(params[:id])
-    
   end
   def update
     mee = Mee.find(params[:id])
     mee.update(mee_params)
+    redirect_to root_path
   end
   def show
     @mee = Mee.find(params[:id])
@@ -39,7 +39,6 @@ class MeesController < ApplicationController
 
   private
   def mee_params
-    params.require(:mee).permit(:q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7)
+    params.require(:mee).permit(:q_a, :q_b, :q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7).merge(user_id: current_user.id)
   end
-  #.merge(user_id: current_user.id)
 end

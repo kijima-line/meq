@@ -1,8 +1,8 @@
 <div style="background:skybue;">
  <%= form_with(model: mee, local: true) do |f| %>
   <h2>問題解決フォーマット（精度アップ）</h2>
-  
-<%= f.date_field :created_at%>必須<%= f.time_field :created_at%>
+  必須
+<%= f.text_field :q_a%>月<%= f.text_field :q_b%>日　
 
 <input id="acd-check1" class="acd-check" type="checkbox">
 <label class="acd-label" for="acd-check1">【問題の箇所】</label>
