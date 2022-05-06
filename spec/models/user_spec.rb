@@ -5,9 +5,9 @@ RSpec.describe User, type: :model do
   end
   describe 'ユーザー新規登録' do
     it 'nameが空では登録できない' do
-      # @user.name = ''  
-      # @user.valid?
-      # expect(@user.errors.full_messages).to include "Nameを入力してください"
+      @user.name = ''  
+      @user.valid?
+      expect(@user.errors.full_messages).to include "Nameを入力してください"
     end
     it 'nameが7文字以上では登録できない' do
       @user.name = '99999999'  # 
@@ -49,9 +49,9 @@ RSpec.describe User, type: :model do
     end
     it 'passwordが129文字以上では登録できない' do
       @user.password = Faker::Internet.password(min_length: 129)
-  @user.password_confirmation = @user.password
-  @user.valid?
-  expect(@user.errors.full_messages).to include("Passwordは128文字以内で入力してください")
+      @user.password_confirmation = @user.password
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Passwordは128文字以内で入力してください")
     end
   end
 end
