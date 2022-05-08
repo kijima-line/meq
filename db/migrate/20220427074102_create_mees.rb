@@ -8,8 +8,8 @@ class CreateMees < ActiveRecord::Migration[6.0]
       t.string :q_5
       t.string :q_6
       t.string :q_7
-      t.string :q_a
-      t.string :q_b
+      t.string :q_a,null: false
+      t.string :q_b,null: false
       t.integer :user_id
       t.timestamps
     end

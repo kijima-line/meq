@@ -1,6 +1,6 @@
 class MeesController < ApplicationController
   def index
-    @mees = Mee.order("created_at DESC")
+    @mees = Mee.order("created_at DESC").includes(:user)
   end
 
   def new
@@ -31,8 +31,11 @@ class MeesController < ApplicationController
   end
   def update
     @mee = Mee.find(params[:id])
-    @mee.update(mee_params)
-    redirect_to root_path
+   if @mee.update(mee_params)
+    else
+      render :new
+    end
+  
   end
   def show
     @mee = Mee.find(params[:id])

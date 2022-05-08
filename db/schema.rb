@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_05_03_160217) do
 
-  create_table "mees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "mees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "q_1"
     t.string "q_2"
     t.string "q_3"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2022_05_03_160217) do
     t.string "q_5"
     t.string "q_6"
     t.string "q_7"
-    t.string "q_a"
-    t.string "q_b"
+    t.string "q_a", null: false
+    t.string "q_b", null: false
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
