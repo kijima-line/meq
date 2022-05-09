@@ -17,6 +17,8 @@
 <div class="box1"> 
 <p>■ エラー画面のスクリーンショット
 <br>スクリーンショットを貼る</p>
+    <%= image_tag mee.image.variant(resize: '500x500') if mee.image.attached? %>
+ <%= f.file_field:image %>
 <%= f.text_area :q_2, placeholder: "text",class:"q_a" %></div>
 </div>
 
