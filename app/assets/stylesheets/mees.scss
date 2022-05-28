@@ -3,73 +3,71 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .box1 {
   background-color: #fff;
-  margin: 0.4em auto;
+  margin: 1em auto;
   padding: 0.7em;
   width: 70%;
- }
- .box2{
-   text-align: center;
- }
- .acd-check{
+}
+.box2 {
+  text-align: center;
+}
+.acd-check {
   display: none;
 }
-.acd-label{
+.acd-label {
   border-radius: 20px;
-  margin: 14px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;  
-  background: #0091EA;
+  margin: 9px;
+  //box-shadow: rgb(0 0 0 / 25%) 0px 25px 50px -12px;
+  background: #0091ea;
   color: #fff;
   display: block;
-  margin-bottom: 1px;
-  padding: 10px;
+  margin-bottom: -16px;
+  padding: 23px;
 }
-.acd-content{
-
+.acd-content {
   height: 0;
   opacity: 0;
   padding: 0 80px;
-  transition: .5s;
+  transition: 0.5s;
   visibility: hidden;
 }
-.acd-check:checked + .acd-label + .acd-content{
+.acd-check:checked + .acd-label + .acd-content {
   height: auto;
   opacity: 1;
   padding: 10px;
   visibility: visible;
 }
 
- 
- p{
-   font-size: 16px;
- }
- h2{
-  padding: 10px; 
-font-size: medium;
-text-align: center;
- }
- .box{
-  background:lavender;  
-  display:table;  
-  width:100%;
+p {
+  font-size: 16px;
+}
+h2 {
+  padding: 10px;
   font-size: medium;
- }
- .q_a{
-   height:100px;
-   width: 100%;
- }
+  text-align: center;
+}
+.box {
+  background: lavender;
+  display: table;
+  width: 100%;
+  font-size: medium;
+}
+.q_a {
+  height: 100px;
+  width: 100%;
+}
 
- .item-list{
+.item-list {
   display: flex;
   justify-content: center; /* 中央寄せ */
   padding: 10px;
 }
 
-
 /* 装飾用 */
 a {
-  text-decoration:none;
+  text-decoration: none;
 }
-.item ,.item1{
+.item,
+.item1 {
   display: inline-block;
   padding: 0.8em 3em;
   background-color: #e3364a;
@@ -79,25 +77,24 @@ a {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s;
-  width:100% ;
-  padding:10px ;
+  width: 100%;
+  padding: 10px;
   text-align: center;
   margin: 10px;
 }
-.item3{
+.item3 {
   display: inline-block;
-  padding: 0.8em 3em;
+  padding: 2.8em 3em;
   background-color: #e3364a;
-  // box-shadow: 0 5px 0 #ca1c30;
   border-radius: 60px;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s;
-  width:40% ;
-  padding:10px ;
+  transition: all -2.7s;
+  width: 29%;
+  padding: 13px;
   text-align: center;
-  margin: 10px;
+  margin: 27px;
 }
 
 /* ホバー時 */
@@ -122,10 +119,10 @@ a {
   box-shadow: none;
   transform: translateY(5px);
 }
-@media ( max-width: 1280px) {
-  .item ,.item1,.item3{
-font-size: 70%;
+@media (max-width: 1280px) {
+  .item,
+  .item1,
+  .item3 {
+    font-size: 70%;
   }
-
-
 }
